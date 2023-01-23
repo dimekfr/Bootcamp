@@ -4,7 +4,7 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background: #fff ;
+    background: rgb(240, 238, 238) ;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: .25rem;
@@ -21,7 +21,7 @@
 }
 
 .item a:hover {
-    color: blue;
+    color: black;
 }
 
 .card {
@@ -40,4 +40,11 @@
 .card img:hover {
     transition: 0.4s ease-in-out;
     transform: scale(1.1);
+}
+
+.iconcolor {
+    color: rgb(71, 70, 70) ;  
+}
+.addtocart {
+    color: rgb(71, 70, 70) ;  
 }

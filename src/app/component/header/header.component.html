@@ -1,17 +1,20 @@
 <header>
-    <div class="navbar navbar-dark bg-primary shadow-sm">
-        <div class="navbar-brand align-item-center d-flex">
-            <i style="font-size: 40px;" class="fas fa-store">&nbsp;
-               
+    <div class="navbar navbar-dark bg-secondary shadow-sm">
+        <div  class="navbar-brand align-item-center d-flex">
+            <a href="#" routerLink="products" class="text-decoration-none  text-white"><i style="font-size: 40px;" class="fas fa-store">&nbsp;   
             </i>
             <strong>Bootcamp Store</strong>
+            </a>
             <div class="form-group">
                <input type="text" class="form-control" placeholder="search product"> 
             </div>
-            <span class="fas fa-search search-icon"></span>
+        <!--  <span class="fas fa-search search-icon"></span> -->
             
         </div>
-        <button routerLink="cart" class="btn btn-primary">
+        <button routerLink="login" class="btn btn-light border border-white ">
+            <i class="fa fa-user fa-fw iconcolor"></i><span> login</span> 
+        </button>
+        <button routerLink="cart" class="btn btn-secondary">
             <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
             <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
         </button>
