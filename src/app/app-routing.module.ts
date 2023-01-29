@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthenticationComponent } from './component/authentication/authentication.component';
-import { CartComponent } from './component/cart/cart.component';
-import { ProductsComponent } from './component/products/products.component';
+import { AuthenticationComponent } from './core/authentication/authentication.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {path: 'login', component: AuthenticationComponent},

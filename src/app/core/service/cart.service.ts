@@ -34,9 +34,20 @@ export class CartService {
     })
     return grandTotal;
   }
+
+  getDiscount(discount : any) : number {
+    let discountTotal = 0;
+    if(discount == 'PROMO20') 
+      discountTotal = this.getTotalPrice() - (this.getTotalPrice() * 0.20);
+    if(discount == 'PROMO10')
+      discountTotal = this.getTotalPrice() - (this.getTotalPrice() * 0.10);
+    return discount;
+  }
+
+
   deleteCartItem(product: any){
     this.cartItems.map((a:any, index:any)=>{
-      if(product.id=== a.id){
+      if(product.id === a.id){
         this.cartItems.splice(index,1);
       }
     })

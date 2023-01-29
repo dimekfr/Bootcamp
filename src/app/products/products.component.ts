@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { of } from 'rxjs';
-import { ApiService } from 'src/app/service/api.service';
-import { CartService } from 'src/app/service/cart.service';
+import { ApiService } from '../core/service/api.service'; 
+import { CartService } from '../core/service/cart.service'; 
 
 @Component({
   selector: 'app-products',
