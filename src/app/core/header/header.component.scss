@@ -1,3 +1,21 @@
+.form-control {
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 10;
+    right: 40%;
+    color: blue;
+    top: 20px;
+
+}
+.iconcolor {
+ color: rgb(71, 70, 70) ;  
+}
+
 .card-top {
     position: relative;
     display: flex;
@@ -47,4 +65,9 @@
 }
 .addtocart {
     color: rgb(71, 70, 70) ;  
+}
+
+.itemList {
+    border-radius: 15px;
+    background: white;
 }

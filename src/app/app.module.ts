@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component'; 
 import { CartComponent } from './cart/cart.component'; 
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './home/products.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthenticationComponent } from './core/authentication/authentication.component'; 
 import { FooterComponent } from './core/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterPipe } from './shared/pipes/filter.pipe';
+import { filter } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,17 @@ import { FormsModule } from '@angular/forms';
     CartComponent,
     ProductsComponent,
     AuthenticationComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

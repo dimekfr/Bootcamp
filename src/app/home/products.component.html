@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="card-top container-fluid ">
+            <ul class="container d-flex justify-content-center col-md-12 ">
+                <li class="item inline-flex relative overflow-hidden border border-light" >
+                    <a (click)="filter('')" class="text-decoration-none iconcolor">
+                        <img src="assets/hatch.png" alt="">
+                        <h6>All Categories</h6>
+                    </a>
+                </li>
+                <li class="item inline-flex relative overflow-hidden border border-light" >
+                    <a (click)="filter('hatch')" class="text-decoration-none iconcolor">
+                        <img src="assets/hatch.png" alt="">
+                        <h6>Hatch</h6>
+                    </a>
+                </li>
+                <li class="item inline-flex relative overflow-hidden border border-light">
+                    <a (click)="filter('pick-up')" class="text-decoration-none iconcolor">
+                        <img src="assets/pickup.png" alt="">
+                        <h6>Pick Up</h6>
+                    </a>
+                </li>
+                <li class="item inline-flex relative overflow-hidden border border-light" >
+                    <a (click)="filter('suv')" class="text-decoration-none iconcolor">
+                        <img src="assets/suv.png" alt="">
+                        <h6>Suv</h6>
+                    </a>
+                </li>
+                <li class="item inline-flex relative overflow-hidden border border-light" >
+                    <a  (click)="filter('sedan')" class=" text-decoration-none iconcolor ">
+                        <img  src="assets/sedan.png" alt="">
+                        <h6>Sedan</h6>
+                    </a>
+                </li>
+            </ul>
+        </div>
+   </div>
+
+    <div class="container">
+        <div class="row">   
+            <ng-container *ngFor="let item of filterCategory | filter:searchKey:'name'">
+                <div class="card col-md-3">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.name}}</h5>
+                    <p><strong>Price:</strong>${{item.price}}</p>
+                    <button class="btn btn-secondary view-details" (click)=addToCart(item)> View Details</button>
+                    <button class="btn btn-primary add-to-cart" (click)=addToCart(item)> Add to cart</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    
+</div>

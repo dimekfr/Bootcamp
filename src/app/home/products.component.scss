@@ -1,0 +1,60 @@
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: rgb(240, 238, 238) ;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+
+.item {
+    
+    text-align: center;
+    border-radius: 15px;
+    background: white;
+    width: 10%; 
+    text-align: center; 
+    margin:10px; 
+}
+
+.item a:hover {
+    color: white;
+    border-color: blue;
+
+}
+
+.card {
+    padding: 20px;
+    margin: 50px;
+    text-align: center;
+}
+
+.card  img {
+    width: 275px;
+    height: 275px;
+    margin-bottom: 12px;
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 500ms ease-out 1s;
+}
+
+.card img:hover {
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
+}
+
+.iconcolor {
+    color: rgb(71, 70, 70) ;  
+}
+.addtocart {
+    color: rgb(71, 70, 70) ;  
+}
+
+.view-details{
+    margin-bottom: 15px;
+}
