@@ -28,14 +28,14 @@
 }
 
 .card {
-    padding: 20px;
+    padding: 1px;
     margin: 50px;
     text-align: center;
 }
 
 .card  img {
-    width: 275px;
-    height: 275px;
+    width: 300px;
+    height: 300px;
     margin-bottom: 12px;
     -webkit-transition: background-color 500ms ease-out 1s;
     -moz-transition: background-color 500ms ease-out 1s;
@@ -54,7 +54,10 @@
 .addtocart {
     color: rgb(71, 70, 70) ;  
 }
-
-.view-details{
-    margin-bottom: 15px;
+.view-details {
+    margin-right: 31px; 
+}
+.buttonGroup {
+    display: inline-block;
+    margin-bottom: 15px;     
 }

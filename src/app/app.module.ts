@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipe } from './shared/pipes/filter.pipe';
 import { filter } from 'rxjs';
 import { ProductDetailsComponent } from './home/product-details/product-details.component';
+import { SignUpComponent } from './core/authentication/sing-up/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductDetailsComponent } from './home/product-details/product-details.
     AuthenticationComponent,
     FooterComponent,
     FilterPipe,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    SignUpComponent
     
   ],
   imports: [

@@ -9,7 +9,7 @@
       {"id":7, "name":"Toyota Yaris 2020" , "price": 200.00, "category": "hatch",  "image":"assets/hatch2.jpg"}, 
       {"id":8, "name":"Jeep Renegate" , "price": 128.00, "category": "suv",  "image":"assets/suv3.jpg"}, 
       {"id":9, "name":"Chevrolet" , "price": 10.78, "category": "pick-up",  "image":"assets/pick-up2.jpg"}, 
-      {"id":10, "name":"Renault" , "price": 50.09,"category": "pick-up",   "image":"assets/pick-up3.jpg"}, 
+      {"id":10, "name":"Ford" , "price": 50.09,"category": "pick-up",   "image":"assets/pick-up3.jpg"}, 
       {"id":11, "name":"BMW" , "price": 200.09,  "category": "sedan", "image":"assets/sedan3.jpg" },
       {"id":12, "name":"Toyota Etios " , "price": 100.05,  "category": "hatch", "image":"assets/hatch3.jpg" }
   ]

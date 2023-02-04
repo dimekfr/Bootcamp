@@ -1,7 +1,7 @@
-<div class="container">
+
     <div class="row">
         <div class="card-top container-fluid ">
-            <ul class="container d-flex justify-content-center col-md-12 ">
+            <ul class="container d-flex justify-content-center col-md-12 " style="margin-bottom: 0px;">
                 <li class="item inline-flex relative overflow-hidden border border-light" >
                     <a (click)="filter('')" class="text-decoration-none iconcolor">
                         <img src="assets/hatch.png" alt="">
@@ -40,15 +40,22 @@
         <div class="row">   
             <ng-container *ngFor="let item of filterCategory | filter:searchKey:'name'">
                 <div class="card col-md-3">
-                    <a routerLink="/products/details/{{item.id}}"><img src="{{item.image}}" alt=""></a>
-                    
-                    <h5 style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.name}}</h5>
-                    <p><strong>Price:</strong>${{item.price}}</p>
-                    <button class="btn btn-secondary view-details" routerLink="/products/details/{{item.id}}"> View Details</button>
-                    <button class="btn btn-primary add-to-cart" (click)=addToCart(item)> Add to cart</button>
+
+                    <div class="">
+                        <a routerLink="/products/details/{{item.id}}"><img class="image" src="{{item.image}}" alt=""></a>
+                    </div>
+
+                    <div >
+                        <h3 style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.name}}</h3>
+                        <h3><strong>Price:</strong>${{item.price}}</h3>
+
+                        <div class="buttonGroup">
+                            <button class="btn btn-secondary view-details" routerLink="/products/details/{{item.id}}"> View Details</button>
+                            <button class="btn btn-primary add-to-cart" (click)=addToCart(item)> Add to cart</button>
+                        </div>
+                    </div>
                 </div>
+                
             </ng-container>
         </div>
-    </div>
-    
 </div>

@@ -28,4 +28,8 @@ export class ProductDetailsComponent implements OnInit {
       console.log('the id is : ' + this.id)
     });
   }
+
+  addToCart(product: any){
+    this.cartService.addtoCart(product)
+  }
 }

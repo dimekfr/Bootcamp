@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">   
-            <div class="card col-md-6">
+            <div class="card col-md-6 left-div">
                 <a ><img src="{{product.image}}" alt=""></a>
                 
             </div>
@@ -14,7 +14,7 @@
                     <h2 style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{product.name}}</h2>
                     <h2><strong>Price:</strong> ${{product.price}}</h2>
                     <button routerLink="/products" class="btn btn-secondary view-details">Shopping More</button>
-                    <button class="btn btn-primary add-to-cart"> Add to cart</button>
+                    <button class="btn btn-primary add-to-cart" (click)=addToCart(product)> Add to cart</button>
                 </div>
             </div>                
                
