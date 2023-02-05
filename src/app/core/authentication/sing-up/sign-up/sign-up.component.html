@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container registration">
   <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="registerForm">
     <div class="form-group col-md-4">
       <label for="inputEmail">Full Name</label>
@@ -56,16 +56,16 @@
       <input type="passwordConfirmation" formControlName="passwordConfirmation" class="form-control" id="inputPasswordConfirmation" placeholder="Password Confirmation">
     </div>
     <div class="form-group">
-      <input type="checkbox" formControlName="termsAndConditionsAgreement" class="form-control">
+      <input type="checkbox" formControlName="termsAndConditionsAgreement" >
       <label>&nbsp;&nbsp;&nbsp;<a href="https://termify.io/terms-and-conditions-generator?gclid=Cj0KCQiAofieBhDXARIsAHTTldqKuKD8s3KBhXrd7MWKuXbjMaAhJ4TOZvFhwNTbikbYxU24slhJiUYaAm_-EALw_wcB">Terms and conditions</a></label>
     </div>
     <div class="form-group">
-      <input type="checkbox" formControlName="lgptAgreement" class="form-control">
+      <input type="checkbox" formControlName="lgptAgreement">
       <label>&nbsp;&nbsp;&nbsp;<a href="https://pt.wikipedia.org/wiki/Lei_Geral_de_Prote%C3%A7%C3%A3o_de_Dados_Pessoais"> LGPT </a></label>
     </div>
     
   </form>
-  <div class="form-group">
+  <div class="form-group actionButton">
     <label class="col-md-2 control-label" for="Cadastrar"></label>
     <div class="col-md-8">
       <button routerLink="/authentication" [disabled]="!signUpForm.valid" id="submit" name="submit" class="btn btn-primary" type="submit">Submit</button>
