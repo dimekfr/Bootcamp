@@ -10,6 +10,8 @@ export class CartComponent implements OnInit {
 
   public products : any = [];
   public grandTotal : number = 0;
+  public totalDiscount : number = 0;
+  
 
   constructor(private cartService : CartService){
 
@@ -30,5 +32,11 @@ export class CartComponent implements OnInit {
   emptyCart(){
     this.cartService.deleteAllCart();
   }
+
+  applyDiscount(promotionCode: string) {
+    this.totalDiscount = this.cartService.getTotalDiscount(promotionCode);
+    console.log(this.totalDiscount);
+  }
+
 
 }

@@ -1,61 +1,66 @@
 <div class="container">
-  <form class="registerForm">
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="registerForm">
     <div class="form-group col-md-4">
       <label for="inputEmail">Full Name</label>
-      <input type="text" class="form-control" id="inputEmail" placeholder="Full Name">
+      <input type="text" formControlName="name" class="form-control" id="inputEmail" placeholder="Full Name">
     </div>
     <div class="form-group col-md-4">
       <label>E-mail</label>
-      <input type="password" class="form-control" id="inputPassword" placeholder="Email">
+      <input type="password" formControlName="email" class="form-control" id="inputPassword" placeholder="Email">
     </div>
     <div class="form-group col-md-4" >
-      <label for="inputFoneNumber">Fone Number</label>
-      <input type="number" class="form-control" id="inputNumber" placeholder="Fone Number">
+      <label for="inputPhoneNumber">Phone Number</label>
+      <input type="number" formControlName="phone" class="form-control" id="inputPhoneNumber" placeholder="Fone Number">
     </div>
     <div class="form-group">
       <h2>Address</h2>
     </div>
     <div class="form-group row">
-      <div class="col-md-3">
-        <label for="inputCEP">CEP</label>
-        <input type="text" class="form-control" id="inputCEP" placeholder="CEP">
+      <div class="col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" formControlName="zip" class="form-control" id="inputZip" placeholder="Zip">
       </div>
       
       <div class="col-md-4">
         <label for="inputStreet">Street</label>
-        <input type="text" class="form-control" id="inputStreet" placeholder="Street">
+        <input type="text"  formControlName="street" class="form-control" id="inputStreet" placeholder="Street">
+      </div>
+
+      <div class="col-md-2">
+        <label for="inputNumber">Number</label>
+        <input type="number" formControlName="zip" class="form-control" id="inputNumber" placeholder="Number">
       </div>
     </div>
     <div class="form-group row">
       <div class="col-md-3">
         <label for="inputNeighborhood">Neighborhood</label>
-        <input type="text" class="form-control" id="inputNeighborhood" placeholder="Neighborhood">
+        <input type="text"  formControlName="neighborhood" class="form-control" id="inputNeighborhood" placeholder="Neighborhood">
       </div>
       <div class="col-md-3">
         <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity" placeholder="City">
+        <input type="text" formControlName="city" class="form-control" id="inputCity" placeholder="City">
       </div>
       <div class="col-md-3">
         <label for="inputState">State</label>
-        <input type="text" class="form-control" id="inputCity" placeholder="State">
+        <input type="text" formControlName="state" class="form-control" id="inputCity" placeholder="State">
       </div>
     </div>
     
 
     <div class="form-group col-md-4">
       <label for="inputPassword">Password</label>
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input type="password" formControlName="password" class="form-control" id="inputPassword" placeholder="Password">
     </div>
     <div class="form-group col-md-4">
       <label>Password Confirmation</label>
-      <input type="passwordConfirmation" class="form-control" id="inputPasswordConfirmation" placeholder="Password Confirmation">
+      <input type="passwordConfirmation" formControlName="passwordConfirmation" class="form-control" id="inputPasswordConfirmation" placeholder="Password Confirmation">
     </div>
     <div class="form-group">
-      <input type="checkbox">
+      <input type="checkbox" formControlName="termsAndConditionsAgreement" class="form-control">
       <label>&nbsp;&nbsp;&nbsp;<a href="https://termify.io/terms-and-conditions-generator?gclid=Cj0KCQiAofieBhDXARIsAHTTldqKuKD8s3KBhXrd7MWKuXbjMaAhJ4TOZvFhwNTbikbYxU24slhJiUYaAm_-EALw_wcB">Terms and conditions</a></label>
     </div>
     <div class="form-group">
-      <input type="checkbox">
+      <input type="checkbox" formControlName="lgptAgreement" class="form-control">
       <label>&nbsp;&nbsp;&nbsp;<a href="https://pt.wikipedia.org/wiki/Lei_Geral_de_Prote%C3%A7%C3%A3o_de_Dados_Pessoais"> LGPT </a></label>
     </div>
     
@@ -63,7 +68,7 @@
   <div class="form-group">
     <label class="col-md-2 control-label" for="Cadastrar"></label>
     <div class="col-md-8">
-      <button id="Submit" name="Submit" class="btn btn-primary" type="Submit">Submit</button>
+      <button routerLink="/authentication" [disabled]="!signUpForm.valid" id="submit" name="submit" class="btn btn-primary" type="submit">Submit</button>
       <button id="Cancel" name="Cancel" class="btn btn-secondary" type="Reset">Cancel</button>
     </div>
   </div>

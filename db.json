@@ -12,5 +12,10 @@
       {"id":10, "name":"Ford" , "price": 50.09,"category": "pick-up",   "image":"assets/pick-up3.jpg"}, 
       {"id":11, "name":"BMW" , "price": 200.09,  "category": "sedan", "image":"assets/sedan3.jpg" },
       {"id":12, "name":"Toyota Etios " , "price": 100.05,  "category": "hatch", "image":"assets/hatch3.jpg" }
+  ],
+  "users": [
+    {"id":123, "name":"eretq", "email": "email@gmail.com", "password":"12345", "admin":"false", "address": {"zip": "", "street": "","number": "","neighborhood": "","city": "","state": ""}},
+    {"id":123, "name":"eretq", "email": "email@gmail.com", "password":"12345", "admin":"false", "address": {"zip": "", "street": "","number": "","neighborhood": "","city": "","state": ""}}, 
+    {"id":123, "name":"eretq", "email": "email@gmail.com", "password":"12345", "admin":"true", "address": {"zip": "", "street": "","number": "","neighborhood": "","city": "","state": ""}}
   ]
 }

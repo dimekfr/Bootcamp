@@ -17,7 +17,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let product of products; let i = index">
-                            <td>{{i+1}}</td>
+                            <td style="width: 325px;">{{i+1}}</td>
                             <td style="width: 12%;">{{product.name}}</td>
                             <td ><img style="width: 120px;" src="{{product.image}}"></td>
                             <td>{{product.price}}</td>
@@ -28,8 +28,16 @@
                             </td>
 
                         </tr>
-                        <tr>
-                            <td colspan="4"></td>
+                        <tr >
+                                <td></td>
+                                <td><label for="promotionCode"> <strong>Promotion Code</strong></label></td>
+                                <td><input type="text"  maxlength="8" placeholder="Promotion Code" name="promotionCode" #promotionCode><button style="background-color: #0275d8; color: white;" type="button" (click)="applyDiscount(promotionCode.value)">Apply</button></td>
+                                <td *ngIf="totalDiscount > 0"><strong>Total discount: ${{totalDiscount | number }}</strong></td> 
+                              
+
+                        </tr>
+                        <tr class="col-md-4">
+                    
                             <td><button (click)= "emptyCart()" class="btn btn-danger">Empty Cart</button></td>
                             <td><button  routerLink="/products" class="btn btn-primary">Shop More</button></td>
                             <td><button class="btn btn-success">Checkout</button></td>

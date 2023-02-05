@@ -11,6 +11,7 @@ export class CartService {
   public cartItems : any =[];
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
+  public totalDiscount = 0;
 
   constructor() { }
   getProducts(){
@@ -35,13 +36,12 @@ export class CartService {
     return grandTotal;
   }
 
-  getDiscount(discount : any) : number {
-    let discountTotal = 0;
-    if(discount == 'PROMO20') 
-      discountTotal = this.getTotalPrice() - (this.getTotalPrice() * 0.20);
-    if(discount == 'PROMO10')
-      discountTotal = this.getTotalPrice() - (this.getTotalPrice() * 0.10);
-    return discount;
+
+  getTotalDiscount(discountCode : any): any {
+    if(discountCode === 'PROMO20') 
+      return this.totalDiscount = this.getTotalPrice() - (this.getTotalPrice() * 0.20);
+    if(discountCode === 'PROMO10')
+      return this.totalDiscount = this.getTotalPrice() - (this.getTotalPrice() * 0.10);
   }
 
 

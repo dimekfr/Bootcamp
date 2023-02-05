@@ -10,9 +10,7 @@ import { of } from 'rxjs';
 })
 export class AuthenticationComponent implements OnInit {
   
-  public users: any; 
-  user = new User();
-  isLogged: boolean = false;
+ 
 
   constructor( private authentication: AuthenticationService){
 
