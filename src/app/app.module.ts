@@ -13,8 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipe } from './shared/pipes/filter.pipe';
 import { filter } from 'rxjs';
-import { ProductDetailsComponent } from './home/product-details/product-details.component';
+import { ProductDetailsComponent } from './product-details/product-details.component'; 
 import { SignUpComponent } from './core/authentication/sing-up/sign-up/sign-up.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { SignUpComponent } from './core/authentication/sing-up/sign-up/sign-up.c
     FooterComponent,
     FilterPipe,
     ProductDetailsComponent,
-    SignUpComponent
+    SignUpComponent,
+    CheckoutComponent,
+    
     
   ],
   imports: [

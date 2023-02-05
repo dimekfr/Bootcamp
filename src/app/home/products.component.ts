@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { of } from 'rxjs';
 import { FilterPipe } from '../shared/pipes/filter.pipe';
 import { ApiService } from '../core/service/product.service'; 
 import { CartService } from '../core/service/cart.service'; 
