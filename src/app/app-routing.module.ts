@@ -5,9 +5,12 @@ import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './home/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component'; 
 import { SignUpComponent } from './core/authentication/sing-up/sign-up/sign-up.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {path: 'authentication', component: AuthenticationComponent},
+  {path: 'user/registration', component: SignUpComponent},
+  {path: 'cart/checkout', component: CheckoutComponent},
   {path:'cart', component: CartComponent},
   {path:'products', component: ProductsComponent},
   {path:'products/details/:id', component: ProductDetailsComponent},
