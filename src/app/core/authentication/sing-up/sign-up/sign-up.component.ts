@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { FormGroup,FormControl } from '@angular/forms';
+import { FormGroup,FormControl, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
+import { Validator } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -7,21 +10,23 @@ import { FormGroup,FormControl } from '@angular/forms';
 })
 export class SignUpComponent {
 
-  signUpForm = new FormGroup({
-    name: new FormControl(),
-    email: new FormControl(),
-    phone: new FormControl(),
-    zip: new FormControl(),
-    street: new FormControl(),
-    neighborhood: new FormControl(),
-    city: new FormControl(),
-    state: new FormControl(),
-    password: new FormControl(),
-    passwordConfirmation: new FormControl(),
-    termsAndConditionsAgreement: new FormControl(),
-    lgptAgreement: new FormControl(),
-
+  signUpForm = this.fb.group({
+    name: ['', Validators.required],
+    email:['', Validators.required],
+    phone: [''],
+    address : this.fb.group({
+      zip: [''],
+      street: [''],
+      number:[''],
+      neighborhood: [''],
+      city: [''],
+      state: [''],
+      password: ['', Validators.required],
+      passwordConfirmation: ['', Validators.required]
+    }) 
   });
+
+  constructor(private fb: FormBuilder){ };
 
   onSubmit() {
     console.warn(this.signUpForm.value);
